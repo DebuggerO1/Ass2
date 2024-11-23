@@ -4,9 +4,7 @@ void merge(int arr[], int l, int m, int r) {
     int i, j, k;
     int n1 = m - l + 1;
     int n2 = r - m;
-
     int L[n1], R[n2];
-
     for (i = 0; i < n1; i++)
         L[i] = arr[l + i];
     for (j = 0; j < n2; j++)
@@ -38,14 +36,12 @@ void merge(int arr[], int l, int m, int r) {
 void mergeSort(int arr[], int l, int r) {
     if (l < r) {
         int m = l + (r - l) / 2;
-
         mergeSort(arr, l, m);
         mergeSort(arr, m + 1, r);
 
         merge(arr, l, m, r);
     }
 }
-
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++)
         printf("%d ", arr[i]);
